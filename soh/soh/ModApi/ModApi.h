@@ -216,6 +216,7 @@ typedef struct {
     void (*StopNetRoomCountdown)(const char* owner);
     bool (*SetCustomItemWorn)(const char* key, bool worn);
     bool (*IsCustomItemWorn)(const char* key);
+    uint32_t (*ReadGameArchiveFiles)(const char* searchMask, SOHArchiveFileFunc visit, void* userData);
     bool (*RestartGame)(const char* reason);
 } SOHModApi;
 
